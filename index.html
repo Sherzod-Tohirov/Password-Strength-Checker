@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Strength Checker</title>
+    <link rel="icon" type="image/x-icon" href="./images/lock_brn.svg">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+<main class="site-main">
+    <div class="container">
+         <div class="password">
+            <h1 class="visually-hidden">Password Checker</h1>
+             <div class="password__card">
+                <form class="password__form js-form" autocomplete="off">
+                    <div class="password__form-group">
+                        <input class="password__input js-input" autofocus type="password" placeholder="Enter your password here..." aria-label="Enter your password">
+                        <span class="password__icon lock-icon"></span>
+                        <span class="password__icon eye-icon js-eye-icon"></span>
+                    </div>
+                </form>
+                <p class="password__info">Complexity: level: <span class="password__info-stage js-info">none</span></p>
+                <span class="password__progress-bar js-bar"></span>
+
+                <div class="password__details details">
+                    <h2 class="details__title" title="Other details">Other details</h2>
+                    <p class="details__desc">Number of special chars: <span class="details__stage js-chars">0</span></p>
+                    <p class="details__desc">Number of  digits: <span class="details__stage js-digits">0</span></p>
+                    <p class="details__desc">Number of  capital letters: <span class="details__stage js-capital-letters">0</span></p>
+                    <p class="details__desc">Number of  small letters: <span class="details__stage js-small-letters">0</span></p>
+                    <p class="details__desc">Time taken to crack your password: <span class="details__stage js-time-crack">none</span></p>
+                 </div>
+             </div>
+            
+         </div>
+    </div>
+</main>
+<script src="./js/app.js"></script>
+</body>
+</html>

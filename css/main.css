@@ -1,0 +1,263 @@
+@font-face {
+    font-family: "Roboto"; 
+    font-weight: 400;
+    font-display: swap;
+    src: url("../fonts/regular.woff2") format("woff2"),
+         url("../fonts/regular.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Roboto"; 
+    font-weight: 500;
+    font-display: swap;
+    src: url("../fonts/medium.woff2") format("woff2"),
+         url("../fonts/medium.woff") format("woff");
+
+}
+
+@font-face {
+    font-family: "Roboto"; 
+    font-weight: 700;
+    font-display: swap;
+    src: url("../fonts/bold.woff2") format("woff2"),
+         url("../fonts/bold.woff") format("woff");
+
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+
+body {
+    height: 100%;
+    margin: 0;
+    font-family: Roboto, Arial, sans-serif;
+    background-color: rgb(55, 109, 196);
+    background-image: url("../images/bg_b.png");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: multiply;
+}
+
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    border: none;
+  }
+  
+
+.container {
+    max-width: 1280px;
+    width: 100%;
+    height: inherit;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.site-main {
+    width: inherit;
+    height: inherit;
+}
+
+.password {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: inherit;
+    height: inherit;
+}
+
+.password__card {
+    display: flex;
+    flex-direction: column;
+    max-width: 550px;
+    width: 100%;
+    min-height: 500px;
+    padding: 25px;
+    border: 1px solid rgba(255,255,255,0.18);
+    border-radius: 20px;
+    background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0));
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px 0 rgba(0,0,0,0.37);
+
+}
+
+.password__form {
+    position: relative;
+    margin-bottom: 80px;
+}
+
+.password__form-group {
+    position: relative;
+    width: 100%;
+}
+
+.password__icon {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    transition: 0.3s ease;
+}
+
+.lock-icon {
+    top: 50%;
+    left: 15px;
+    transform: translateY(-55%);
+    background: url("../images/lock_trp.svg") no-repeat center;
+    background-size: 25px;
+    opacity: 0.6;
+}
+
+.eye-icon {
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    background: url("../images/eye.svg") no-repeat center;
+    background-size: 25px;
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+.eye-closed-icon {
+    background: url("../images/eye-closed.svg") no-repeat center !important;
+    background-size: 25px !important;
+}
+
+.password__input {
+    width: 100%;
+    padding: 20px 45px 16px 50px;
+    font-size: 17px;
+    color: #fff105;
+    border: 2px solid transparent;
+    border-bottom-color:#01fff4;
+    background-color: transparent;
+    outline: none;
+    transition: 0.3s ease;
+}
+
+.password__input:focus {
+    border-color: #0dded8;
+    /* box-shadow: 0px 0px 20px 1px #0dded8; */
+}
+
+.password__input:focus ~ .password__icon {
+    opacity: 1;
+}
+.password__input::placeholder {
+    color: #fff105;
+    opacity: 0.5;
+}
+
+.password__info {
+    margin-top: 0;
+    margin-bottom: 40px;
+    font-size: 17px;
+    letter-spacing: 1.5px;
+    color: #fff;
+}
+
+.password__info-stage {
+    margin-left: 10px;
+    font-weight: 700;
+}
+
+.password__progress-bar {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 22px;
+    margin-bottom: 40px;
+    border-radius: 10px;
+    background-color: rgba(255,255,255,0.3);
+    overflow: hidden;
+}
+
+.password__progress-bar::before {
+    width: 0;
+    height: inherit;
+    border-radius: inherit;
+    content: "";
+    transition: width 0.3s ease;
+}
+
+.password__details {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.details__title {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 0.8px;
+    color: #ffffff99;
+}
+
+.details__desc {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 15px;
+    font-weight: 500;
+    color: #fff;
+}
+
+.details__stage {
+    margin-left: 10px;
+    color: #fff105;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.strong {
+    color: #7cff01 !important;
+}
+
+.strong::before {
+    background: #7cff01 repeating-linear-gradient(45deg, rgba(0,0,0,0.2), rgba(0,0,0,0.1) 10px, rgba(0,0,0,0.2) 10px) !important;
+}
+
+.medium {
+    color: #fff105 !important;
+}
+
+.medium::before {
+    background: #fff105 repeating-linear-gradient(45deg, rgba(0,0,0,0.2), rgba(0,0,0,0.1) 10px, rgba(0,0,0,0.2) 10px) !important;
+}
+
+.simple {
+    color: #fe0000 !important;
+}
+
+.simple::before {
+    background: #fe0000 repeating-linear-gradient(45deg, rgba(0,0,0,0.2), rgba(0,0,0,0.1) 10px, rgba(0,0,0,0.2) 10px) !important;
+}
